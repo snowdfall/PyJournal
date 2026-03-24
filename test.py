@@ -76,7 +76,7 @@ def decision():
 
         backtomenu = input("\nPress R to return to menu.\n\nPress 4 to exit. ")
         if backtomenu.lower() == "r":
-                subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True) ##clears tui
+                subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True) #clears tui
                 return decision()
         elif backtomenu == "4":
                 print("Closing.")
