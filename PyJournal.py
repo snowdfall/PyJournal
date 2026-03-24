@@ -6,8 +6,7 @@ config_file = "journal_config.txt"
 
 def decision():
     subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True) ##clears tui
-    choice = input("\033[1;32mJournal App\033[0m\n 1. Write to journal\n 2. Read journal\n 3. Configure \n 4. Exit\n\nChoose an option: ")
-   
+    choice = input("\033[1;32mPyJournal\nALPHA 0.1.0\033[0m\n 1. Write to journal\n 2. Read journal\n 3. Configure \n 4. Exit\n\nChoose an option: ")
     if choice == "1":
         def write_journal():
             # Try to load last used directory from a config file
@@ -48,7 +47,9 @@ def decision():
 
                 print("Saving journal in the existing directory.")
 
-            entry = input("\nWrite your journal entry:\n\nif you dont want to save and return to the menu, press R and then enter.\n\n---> ")
+            print("\nWrite your journal entry:\n\nif you dont want to save and return to the menu, press R and then enter")
+
+            entry = input("\n---> ")
 
             if entry.lower() == "r":
                 return decision()
